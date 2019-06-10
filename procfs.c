@@ -30,10 +30,12 @@ procfsiread(struct inode *dp, struct inode *ip) {
     ip->major = PROCFS;
     ip->type = T_DEV;
     ip->valid = 1;
-    if (ip->inum == namei("proc")->inum || ip->inum % 1000 == 0 || (ip->inum > NINODES && ip->inum <= INODEINFO))
+    if (ip->inum == namei("proc")->inum ||
+    (ip->inum >= 1000 && ip->inum % 1000 == 0) ||
+    (ip->inum == INODEINFO))
+
         ip->minor = T_DIR;
     else ip->minor = T_FILE;
-
 }
 
 void itoa(int n, char *str){
@@ -51,17 +53,49 @@ void itoa(int n, char *str){
     str[len]='\0';
 }
 
+int init_proc_dirents(struct inode *ip, char *dst, int off, int n) {
+    struct dirent proc_dirents[NPROC + 2];
+
+    // init first 2 dirents . .. (namei("proc")->inum, namei("")->inum)
+    proc_dirents[0].inum = ip->inum;
+    strncpy(proc_dirents[0].name, ".", 1);
+    proc_dirents[0].name[1]='\0';
+    proc_dirents[1].inum = namei("")->inum;
+    strncpy(proc_dirents[1].name, "..", 2);
+    proc_dirents[1].name[2]='\0';
+
+    // init pid dirents (pid*1000)
+    int dirents_size = init_pid_dirents(ip,proc_dirents);
+
+    // init 3 dirents: ideinfo, filestat, inodeinfo (NINODES+1,+2,+3)
+    proc_dirents[dirents_size].inum = IDEINFO;
+    strncpy(proc_dirents[dirents_size].name, "ideinfo", 7);
+    proc_dirents[dirents_size].name[7]='\0';
+    dirents_size++;
+
+    proc_dirents[dirents_size].inum = FILESTAT;
+    strncpy(proc_dirents[dirents_size].name, "filestat", 8);
+    proc_dirents[dirents_size].name[8]='\0';
+
+    proc_dirents[dirents_size].inum = INODEINFO;
+    strncpy(proc_dirents[dirents_size].name, "inodeinfo", 9);
+    proc_dirents[dirents_size].name[9]='\0';
+    dirents_size++;
+
+    if (off >= dirents_size * sizeof(struct dirent))
+        return 0;
+
+    memmove(dst, (char *)((uint)proc_dirents+(uint)off), n);
+    return n;
+}
+
 int
 procfsread(struct inode *ip, char *dst, int off, int n) {
-    struct dirent proc_dirents[NPROC + 2];
     struct inode *proc_inode = namei("proc");
 
     // case /proc/ directory
-    if (ip == proc_inode)
+    if (ip == namei("proc"))
         return init_proc_dirents(ip, dst, off, n);
-    // init first 2 dirents . .. (namei("proc")->inum, namei("")->inum)
-    // init pid dirents (pid*1000)
-    // init 3 dirents: ideinfo, filestat, inodeinfo (NINODES+1,+2,+3)
     // write dirents arr + off -> dst, return n
 
     // case /proc/pid/

@@ -532,3 +532,43 @@ procdump(void)
     cprintf("\n");
   }
 }
+
+void itoa(int n, char *str){
+    int temp, len;
+    temp = n;
+    len = 1;
+    while (temp/10!=0){
+        len++;
+        temp /= 10;
+    }
+    for (temp = len; temp > 0; temp--){
+        str[temp-1] = (n%10)+48;
+        n/=10;
+    }
+    str[len]='\0';
+}
+
+#define DIRSIZ 14
+
+struct dirent {
+    ushort inum;
+    char name[DIRSIZ];
+};
+
+int
+init_pid_dirents(struct inode *ip,struct dirent *proc_dirents)
+{
+    struct proc *p;
+    int idx = 2;
+    acquire(&ptable.lock);
+    for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+        if(p->state != ZOMBIE && p->state != UNUSED){
+            itoa(p->pid, proc_dirents[idx].name);
+            proc_dirents[idx].inum = p->pid * 1000;
+            idx++;
+        }
+    }
+    release(&ptable.lock);
+    return idx;
+}
+

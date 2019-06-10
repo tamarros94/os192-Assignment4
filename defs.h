@@ -9,6 +9,7 @@ struct spinlock;
 struct sleeplock;
 struct stat;
 struct superblock;
+struct dirent;
 
 // bio.c
 void            binit(void);
@@ -120,6 +121,8 @@ void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
 void            yield(void);
+int            init_pid_dirents(struct inode *,struct dirent*);
+
 
 // procfs.c
 void            procfsinit(void);
