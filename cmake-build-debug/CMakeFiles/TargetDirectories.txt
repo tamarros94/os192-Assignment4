@@ -1,0 +1,3 @@
+/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/CMakeFiles/os192_Assignment4.dir
+/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/CMakeFiles/edit_cache.dir
