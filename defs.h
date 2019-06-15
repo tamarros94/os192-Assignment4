@@ -58,6 +58,10 @@ int             writei(struct inode*, char*, uint, uint);
 void            ideinit(void);
 void            ideintr(void);
 void            iderw(struct buf*);
+int             count_waiting(void);
+int             count_read_waiting(void);
+int             count_write_waiting(void);
+
 
 // ioapic.c
 void            ioapicenable(int irq, int cpu);

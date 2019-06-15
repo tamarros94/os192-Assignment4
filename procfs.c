@@ -12,6 +12,8 @@
 #include "proc.h"
 #include "x86.h"
 
+// TODO return actual size from read file operations written (if it's smaller than n)
+
 #define NINODES 200
 #define IDEINFO 201
 #define FILESTAT 202
@@ -145,6 +147,51 @@ int handle_pid_files(struct inode *ip, char *dst, int off, int n) {
         }
     }
     return n;
+}
+
+int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
+    char waiting_count[10];
+    char waiting_read_count[10];
+    char waiting_write_count[10];
+    int buff_index = 0;
+
+    // Waiting
+    memmove(dst, "Waiting operations: ", strlen("Waiting operations: "));
+    buff_index+=strlen("Waiting operations: ");
+
+    itoa(count_waiting(), waiting_count);
+
+    memmove(dst + buff_index, waiting_count, strlen(waiting_count));
+    buff_index+=strlen(waiting_count);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // Read
+    memmove(dst, "Read waiting operations: ", strlen("Read waiting operations: "));
+    buff_index+=strlen("Read waiting operations: ");
+
+    itoa(count_read_waiting(), waiting_read_count);
+
+    memmove(dst + buff_index, waiting_read_count, strlen(waiting_read_count));
+    buff_index+=strlen(waiting_count);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // Write
+    memmove(dst, "Write waiting operations: ", strlen("Write waiting operations: "));
+    buff_index+=strlen("Write waiting operations: ");
+
+    itoa(count_write_waiting(), waiting_write_count);
+
+    memmove(dst + buff_index, waiting_write_count, strlen(waiting_write_count));
+    buff_index+=strlen(waiting_write_count);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // TODO: Working blocks list
 }
 
 // <proc>
