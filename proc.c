@@ -572,3 +572,19 @@ init_pid_dirents(struct inode *ip,struct dirent *proc_dirents)
     return idx;
 }
 
+struct proc*
+get_proc_by_pid(int pid)
+{
+    struct proc *p;
+    struct proc *return_me = 0;
+    acquire(&ptable.lock);
+    for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
+        if (p->pid == pid){
+            return_me = p;
+            break;
+        }
+    }
+    release(&ptable.lock);
+    return return_me;
+}
+

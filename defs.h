@@ -122,6 +122,7 @@ int             wait(void);
 void            wakeup(void*);
 void            yield(void);
 int            init_pid_dirents(struct inode *,struct dirent*);
+struct proc*   get_proc_by_pid(int);
 
 
 // procfs.c

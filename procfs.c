@@ -119,6 +119,34 @@ int init_proc_pid_dirents(struct inode *ip, char *dst, int off, int n) {
     return n;
 }
 
+int handle_pid_files(struct inode *ip, char *dst, int off, int n) {
+    int pid = ip->inum / 1000;
+    int filenum = ip->inum % 1000;
+    struct proc *p;
+    p = get_proc_by_pid(pid);
+    if (filenum == NAME) {
+        char *name = p->name;
+        memmove(dst, "name: ", strlen("name:"));
+        memmove(dst + strlen("name: "), name, strlen(name) + 1);
+    }
+    if (filenum == STATUS) {
+        int state = p->state;
+        char proc_size[10];
+        if (state == RUNNABLE) {
+            memmove(dst, "status: runnable, size: ", strlen("status: runnable, size: "));
+            itoa(p->sz, proc_size);
+            memmove(dst + strlen("status: runnable, size: "), proc_size, strlen(proc_size) + 1);
+        }
+            // state = running
+        else {
+            memmove(dst, "status: running, size: ", strlen("status: running, size: "));
+            itoa(p->sz, proc_size);
+            memmove(dst + strlen("status: running, size: "), proc_size, strlen(proc_size) + 1);
+        }
+    }
+    return n;
+}
+
 // <proc>
 // -- .
 // -- ..
