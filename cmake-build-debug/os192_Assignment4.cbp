@@ -167,6 +167,9 @@
 		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ls.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/lsnd.c">
+			<Option target="os192_Assignment4"/>
+		</Unit>
 		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/main.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
@@ -249,9 +252,6 @@
 			<Option target="os192_Assignment4"/>
 		</Unit>
 		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sysproc.c">
-			<Option target="os192_Assignment4"/>
-		</Unit>
-		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/test.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
 		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/trap.c">

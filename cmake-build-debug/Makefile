@@ -663,6 +663,33 @@ ls.c.s:
 	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/ls.c.s
 .PHONY : ls.c.s
 
+lsnd.o: lsnd.c.o
+
+.PHONY : lsnd.o
+
+# target to build an object file
+lsnd.c.o:
+	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/lsnd.c.o
+.PHONY : lsnd.c.o
+
+lsnd.i: lsnd.c.i
+
+.PHONY : lsnd.i
+
+# target to preprocess a source file
+lsnd.c.i:
+	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/lsnd.c.i
+.PHONY : lsnd.c.i
+
+lsnd.s: lsnd.c.s
+
+.PHONY : lsnd.s
+
+# target to generate assembly for a file
+lsnd.c.s:
+	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/lsnd.c.s
+.PHONY : lsnd.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -1176,33 +1203,6 @@ sysproc.c.s:
 	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/sysproc.c.s
 .PHONY : sysproc.c.s
 
-test.o: test.c.o
-
-.PHONY : test.o
-
-# target to build an object file
-test.c.o:
-	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/test.c.o
-.PHONY : test.c.o
-
-test.i: test.c.i
-
-.PHONY : test.i
-
-# target to preprocess a source file
-test.c.i:
-	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/test.c.i
-.PHONY : test.c.i
-
-test.s: test.c.s
-
-.PHONY : test.s
-
-# target to generate assembly for a file
-test.c.s:
-	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/test.c.s
-.PHONY : test.c.s
-
 trap.o: trap.c.o
 
 .PHONY : trap.o
@@ -1488,6 +1488,9 @@ help:
 	@echo "... ls.o"
 	@echo "... ls.i"
 	@echo "... ls.s"
+	@echo "... lsnd.o"
+	@echo "... lsnd.i"
+	@echo "... lsnd.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -1545,9 +1548,6 @@ help:
 	@echo "... sysproc.o"
 	@echo "... sysproc.i"
 	@echo "... sysproc.s"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
 	@echo "... trap.o"
 	@echo "... trap.i"
 	@echo "... trap.s"

@@ -63,7 +63,7 @@ add_executable(os192_Assignment4
         syscall.h
         sysfile.c
         sysproc.c
-        test.c
+        lsnd.c
         trap.c
         traps.h
         types.h

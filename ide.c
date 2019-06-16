@@ -209,7 +209,7 @@ count_write_waiting() {
     return count;
 }
 
-void itoa(int n, char *str) {
+void itoa4(int n, char *str) {
     int temp, len;
     temp = n;
     len = 1;
@@ -237,7 +237,7 @@ get_working_blocks_list() {
     int buff_index = strlen("Working blocks: ");
     while (curr != 0) {
         // dev
-        itoa(curr->dev, itoa_buf);
+        itoa4(curr->dev, itoa_buf);
         memmove(buff + buff_index, itoa_buf, strlen(itoa_buf));
         buff_index += strlen(itoa_buf);
         memmove(itoa_buf, 0, sizeof(itoa_buf));
@@ -246,7 +246,7 @@ get_working_blocks_list() {
         buff_index++;
 
         // block
-        itoa(curr->blockno, itoa_buf);
+        itoa4(curr->blockno, itoa_buf);
         memmove(buff + buff_index, itoa_buf, strlen(itoa_buf));
         buff_index += strlen(itoa_buf);
         memmove(itoa_buf, 0, sizeof(itoa_buf));

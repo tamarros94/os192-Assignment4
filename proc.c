@@ -533,7 +533,7 @@ procdump(void)
   }
 }
 
-void itoa(int n, char *str){
+void itoa3(int n, char *str){
     int temp, len;
     temp = n;
     len = 1;
@@ -563,7 +563,7 @@ init_pid_dirents(struct inode *ip,struct dirent *proc_dirents)
     acquire(&ptable.lock);
     for(p = ptable.proc; p < &ptable.proc[NPROC]; p++){
         if(p->state != ZOMBIE && p->state != UNUSED){
-            itoa(p->pid, proc_dirents[idx].name);
+            itoa3(p->pid, proc_dirents[idx].name);
             proc_dirents[idx].inum = p->pid * 1000;
             idx++;
         }

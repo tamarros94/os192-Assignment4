@@ -993,28 +993,28 @@ CMakeFiles/os192_Assignment4.dir/sysproc.c.o.provides: CMakeFiles/os192_Assignme
 CMakeFiles/os192_Assignment4.dir/sysproc.c.o.provides.build: CMakeFiles/os192_Assignment4.dir/sysproc.c.o
 
 
-CMakeFiles/os192_Assignment4.dir/test.c.o: CMakeFiles/os192_Assignment4.dir/flags.make
-CMakeFiles/os192_Assignment4.dir/test.c.o: ../test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/os192_Assignment4.dir/test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os192_Assignment4.dir/test.c.o   -c /users/studs/bsc/2016/rosent/os192-Assignment4/test.c
+CMakeFiles/os192_Assignment4.dir/lsnd.c.o: CMakeFiles/os192_Assignment4.dir/flags.make
+CMakeFiles/os192_Assignment4.dir/lsnd.c.o: ../lsnd.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/os192_Assignment4.dir/lsnd.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/os192_Assignment4.dir/lsnd.c.o   -c /users/studs/bsc/2016/rosent/os192-Assignment4/lsnd.c
 
-CMakeFiles/os192_Assignment4.dir/test.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os192_Assignment4.dir/test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /users/studs/bsc/2016/rosent/os192-Assignment4/test.c > CMakeFiles/os192_Assignment4.dir/test.c.i
+CMakeFiles/os192_Assignment4.dir/lsnd.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/os192_Assignment4.dir/lsnd.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /users/studs/bsc/2016/rosent/os192-Assignment4/lsnd.c > CMakeFiles/os192_Assignment4.dir/lsnd.c.i
 
-CMakeFiles/os192_Assignment4.dir/test.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os192_Assignment4.dir/test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /users/studs/bsc/2016/rosent/os192-Assignment4/test.c -o CMakeFiles/os192_Assignment4.dir/test.c.s
+CMakeFiles/os192_Assignment4.dir/lsnd.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/os192_Assignment4.dir/lsnd.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /users/studs/bsc/2016/rosent/os192-Assignment4/lsnd.c -o CMakeFiles/os192_Assignment4.dir/lsnd.c.s
 
-CMakeFiles/os192_Assignment4.dir/test.c.o.requires:
+CMakeFiles/os192_Assignment4.dir/lsnd.c.o.requires:
 
-.PHONY : CMakeFiles/os192_Assignment4.dir/test.c.o.requires
+.PHONY : CMakeFiles/os192_Assignment4.dir/lsnd.c.o.requires
 
-CMakeFiles/os192_Assignment4.dir/test.c.o.provides: CMakeFiles/os192_Assignment4.dir/test.c.o.requires
-	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/test.c.o.provides.build
-.PHONY : CMakeFiles/os192_Assignment4.dir/test.c.o.provides
+CMakeFiles/os192_Assignment4.dir/lsnd.c.o.provides: CMakeFiles/os192_Assignment4.dir/lsnd.c.o.requires
+	$(MAKE) -f CMakeFiles/os192_Assignment4.dir/build.make CMakeFiles/os192_Assignment4.dir/lsnd.c.o.provides.build
+.PHONY : CMakeFiles/os192_Assignment4.dir/lsnd.c.o.provides
 
-CMakeFiles/os192_Assignment4.dir/test.c.o.provides.build: CMakeFiles/os192_Assignment4.dir/test.c.o
+CMakeFiles/os192_Assignment4.dir/lsnd.c.o.provides.build: CMakeFiles/os192_Assignment4.dir/lsnd.c.o
 
 
 CMakeFiles/os192_Assignment4.dir/trap.c.o: CMakeFiles/os192_Assignment4.dir/flags.make
@@ -1250,7 +1250,7 @@ os192_Assignment4_OBJECTS = \
 "CMakeFiles/os192_Assignment4.dir/syscall.c.o" \
 "CMakeFiles/os192_Assignment4.dir/sysfile.c.o" \
 "CMakeFiles/os192_Assignment4.dir/sysproc.c.o" \
-"CMakeFiles/os192_Assignment4.dir/test.c.o" \
+"CMakeFiles/os192_Assignment4.dir/lsnd.c.o" \
 "CMakeFiles/os192_Assignment4.dir/trap.c.o" \
 "CMakeFiles/os192_Assignment4.dir/uart.c.o" \
 "CMakeFiles/os192_Assignment4.dir/ulib.c.o" \
@@ -1302,7 +1302,7 @@ os192_Assignment4: CMakeFiles/os192_Assignment4.dir/string.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/syscall.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/sysfile.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/sysproc.c.o
-os192_Assignment4: CMakeFiles/os192_Assignment4.dir/test.c.o
+os192_Assignment4: CMakeFiles/os192_Assignment4.dir/lsnd.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/trap.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/uart.c.o
 os192_Assignment4: CMakeFiles/os192_Assignment4.dir/ulib.c.o
@@ -1360,7 +1360,7 @@ CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/stri
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/syscall.c.o.requires
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/sysfile.c.o.requires
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/sysproc.c.o.requires
-CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/test.c.o.requires
+CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/lsnd.c.o.requires
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/trap.c.o.requires
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/uart.c.o.requires
 CMakeFiles/os192_Assignment4.dir/requires: CMakeFiles/os192_Assignment4.dir/ulib.c.o.requires
