@@ -75,12 +75,6 @@ int init_proc_dirents(struct inode *ip, char *dst, int off, int n) {
     // init pid dirents (pid*1000)
     int dirents_size = init_pid_dirents(ip, proc_dirents);
 
-    cprintf(". %d\n", proc_dirents[0].inum);
-    cprintf(".. %d\n", proc_dirents[1].inum);
-    cprintf("1 %d\n", proc_dirents[2].inum);
-    cprintf("2 %d\n", proc_dirents[3].inum);
-    cprintf("3 %d\n", proc_dirents[4].inum);
-
 
     // init 3 dirents: ideinfo, filestat, inodeinfo (NINODES+1,+2,+3)
     proc_dirents[dirents_size].inum = IDEINFO;
@@ -161,6 +155,7 @@ int handle_pid_files(struct inode *ip, char *dst, int off, int n) {
             memmove(dst + strlen("status: running, size: "), proc_size, strlen(proc_size) + 1);
         }
     }
+    if(off > 0) return 0;
     return n;
 }
 
@@ -211,6 +206,8 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
     memmove(dst + buff_index, buf, strlen(buf));
     buff_index += strlen(buf);
     memmove(dst + buff_index, "\0", 1);
+
+    if(off > 0) return 0;
 
     return buff_index;
 }
@@ -285,6 +282,8 @@ int read_FILESTAT(struct inode *ip, char *dst, int off, int n) {
     buff_index++;
 
     memmove(dst + buff_index, "\0", 1);
+
+    if(off > 0) return 0;
 
     return buff_index;
 }
