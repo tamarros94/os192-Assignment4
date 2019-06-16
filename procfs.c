@@ -197,6 +197,78 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
     buff_index+=strlen(buf);
     memmove(dst + buff_index, "\0", 1);
 
+    return buff_index;
+}
+
+int read_FILESTAT(struct inode *ip, char *dst, int off, int n) {
+    char free_fds[10];
+    char unique_fds[10];
+    char writeable_fds[10];
+    char readable_fds[10];
+    char ratio[10];
+
+    int buff_index = 0;
+
+    // free fds
+    memmove(dst, "Free fds: ", strlen("Free fds: "));
+    buff_index+=strlen("Free fds: ");
+
+    itoa(count_free_fds(), free_fds);
+
+    memmove(dst + buff_index, free_fds, strlen(free_fds));
+    buff_index+=strlen(free_fds);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // unique fds
+    memmove(dst+buff_index, "Unique inode fds: ", strlen("Unique inode fds: "));
+    buff_index+=strlen("Unique inode fds: ");
+
+    itoa(count_unique_fds(), unique_fds);
+
+    memmove(dst + buff_index, unique_fds, strlen(unique_fds));
+    buff_index+=strlen(unique_fds);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // writeable fds
+    memmove(dst+buff_index, "Writeable fds: ", strlen("Writeable fds: "));
+    buff_index+=strlen("Writeable fds: ");
+
+    itoa(count_writeable_fds(), writeable_fds);
+
+    memmove(dst + buff_index, writeable_fds, strlen(writeable_fds));
+    buff_index+=strlen(writeable_fds);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // readable fds
+    memmove(dst+buff_index, "Readable fds: ", strlen("Readable fds: "));
+    buff_index+=strlen("Readable fds: ");
+
+    itoa(count_readable_fds(), readable_fds);
+
+    memmove(dst + buff_index, readable_fds, strlen(readable_fds));
+    buff_index+=strlen(readable_fds);
+
+    memmove(dst + buff_index, "\n", 1);
+    buff_index++;
+
+    // refs per fds
+    memmove(dst+buff_index, "Refs per fds: ", strlen("Refs per fds: "));
+    buff_index+=strlen("Refs per fds: ");
+
+    itoa(get_refs_per_fds(), ratio);
+
+    memmove(dst + buff_index, ratio, strlen(ratio));
+    buff_index+=strlen(ratio);
+
+    memmove(dst + buff_index, "\0", 1);
+
+    return buff_index;
 }
 
 // <proc>

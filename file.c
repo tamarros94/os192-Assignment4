@@ -155,3 +155,84 @@ filewrite(struct file *f, char *addr, int n)
   panic("filewrite");
 }
 
+int
+count_free_fds()
+{
+    struct file *curr;
+    int count = 0;
+
+    acquire(&ftable.lock);
+    for(curr = ftable.file; curr < ftable.file + NFILE; curr++){
+        if(curr->ref == 0){
+            count++;
+        }
+    }
+    release(&ftable.lock);
+    return count;
+}
+
+int count_unique_fds()
+{
+    int range[200];
+    memmove(range,0, sizeof(range));
+    struct file *curr;
+    int count = 0;
+
+    acquire(&ftable.lock);
+    for(curr = ftable.file; curr < ftable.file + NFILE; curr++){
+        if(range[curr->ip->inum] == 0){
+            count++;
+            range[curr->ip->inum] = 1;
+        }
+    }
+    release(&ftable.lock);
+    return count;
+}
+
+int count_writeable_fds()
+{
+    struct file *curr;
+    int count = 0;
+
+    acquire(&ftable.lock);
+    for(curr = ftable.file; curr < ftable.file + NFILE; curr++){
+        if(curr->writable != 0){
+            count++;
+        }
+    }
+    release(&ftable.lock);
+    return count;
+}
+
+int count_readable_fds()
+{
+    struct file *curr;
+    int count = 0;
+
+    acquire(&ftable.lock);
+    for(curr = ftable.file; curr < ftable.file + NFILE; curr++){
+        if(curr->readable != 0){
+            count++;
+        }
+    }
+    release(&ftable.lock);
+    return count;
+}
+
+double
+get_refs_per_fds()
+{
+    struct file *curr;
+    int refs = 0;
+    int total = 0;
+    acquire(&ftable.lock);
+    for(curr = ftable.file; curr < ftable.file + NFILE; curr++){
+        if(curr->ref == 1){
+            refs++;
+        }
+        total++;
+    }
+    release(&ftable.lock);
+    double ratio = refs/total;
+    return ratio;
+}

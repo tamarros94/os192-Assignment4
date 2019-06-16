@@ -34,6 +34,12 @@ void            fileinit(void);
 int             fileread(struct file*, char*, int n);
 int             filestat(struct file*, struct stat*);
 int             filewrite(struct file*, char*, int n);
+int             count_free_fds(void);
+int             count_unique_fds(void);
+int             count_writeable_fds(void);
+int             count_readable_fds(void);
+double          get_refs_per_fds(void);
+
 
 // fs.c
 void            readsb(int dev, struct superblock *sb);
