@@ -1,4 +1,4 @@
-# Install script for directory: /home/tamar/os192/Assignment4/os192-Assignment4
+# Install script for directory: /users/studs/bsc/2016/rosent/os192-Assignment4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

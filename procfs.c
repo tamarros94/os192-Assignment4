@@ -168,7 +168,7 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
     buff_index++;
 
     // Read
-    memmove(dst, "Read waiting operations: ", strlen("Read waiting operations: "));
+    memmove(dst+buff_index, "Read waiting operations: ", strlen("Read waiting operations: "));
     buff_index+=strlen("Read waiting operations: ");
 
     itoa(count_read_waiting(), waiting_read_count);
@@ -180,7 +180,7 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
     buff_index++;
 
     // Write
-    memmove(dst, "Write waiting operations: ", strlen("Write waiting operations: "));
+    memmove(dst+buff_index, "Write waiting operations: ", strlen("Write waiting operations: "));
     buff_index+=strlen("Write waiting operations: ");
 
     itoa(count_write_waiting(), waiting_write_count);
@@ -191,7 +191,12 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
     memmove(dst + buff_index, "\n", 1);
     buff_index++;
 
-    // TODO: Working blocks list
+    // Working blocks
+    char *buf = get_working_blocks_list();
+    memmove(dst+buff_index, buf, strlen(buf));
+    buff_index+=strlen(buf);
+    memmove(dst + buff_index, "\0", 1);
+
 }
 
 // <proc>
@@ -202,8 +207,8 @@ int read_IDEINFO(struct inode *ip, char *dst, int off, int n) {
 // -- <pid directories> (pid*1000)
 // -- -- .
 // -- -- ..
-// -- -- name
-// -- -- status
+// -- -- name (1100)
+// -- -- status (1200)
 // -- <inodeinfo> (203)
 // -- -- .
 // -- -- ..

@@ -38,6 +38,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/os192_Assignment4.dir/syscall.c.o"
   "CMakeFiles/os192_Assignment4.dir/sysfile.c.o"
   "CMakeFiles/os192_Assignment4.dir/sysproc.c.o"
+  "CMakeFiles/os192_Assignment4.dir/test.c.o"
   "CMakeFiles/os192_Assignment4.dir/trap.c.o"
   "CMakeFiles/os192_Assignment4.dir/uart.c.o"
   "CMakeFiles/os192_Assignment4.dir/ulib.c.o"

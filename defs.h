@@ -61,6 +61,7 @@ void            iderw(struct buf*);
 int             count_waiting(void);
 int             count_read_waiting(void);
 int             count_write_waiting(void);
+char *          get_working_blocks_list(void);
 
 
 // ioapic.c

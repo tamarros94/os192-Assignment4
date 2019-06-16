@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.10)
 project(os192_Assignment4 C)
 
 set(CMAKE_C_STANDARD 11)
@@ -63,6 +63,7 @@ add_executable(os192_Assignment4
         syscall.h
         sysfile.c
         sysproc.c
+        test.c
         trap.c
         traps.h
         types.h

@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug"/>
+				<Option working_dir="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug"/>
+				<Option working_dir="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="os192_Assignment4">
-				<Option output="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/os192_Assignment4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug"/>
+				<Option output="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/os192_Assignment4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tamar/os192/Assignment4/os192-Assignment4/."/>
+					<Add directory="/users/studs/bsc/2016/rosent/os192-Assignment4/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -42,20 +42,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 os192_Assignment4"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 os192_Assignment4"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="os192_Assignment4/fast">
-				<Option output="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/os192_Assignment4" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug"/>
+				<Option output="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/os192_Assignment4" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/tamar/os192/Assignment4/os192-Assignment4/."/>
+					<Add directory="/users/studs/bsc/2016/rosent/os192-Assignment4/."/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
@@ -63,231 +63,234 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 os192_Assignment4/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 os192_Assignment4/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug"/>
+				<Option working_dir="/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/tamar/os192/Assignment4/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/studs/bsc/2016/rosent/os192-Assignment4/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/asm.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/asm.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/bio.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/bio.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/bootmain.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/bootmain.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/buf.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/buf.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/cat.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/cat.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/console.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/console.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/date.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/date.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/defs.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/defs.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/echo.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/echo.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/elf.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/elf.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/exec.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/exec.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/fcntl.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/fcntl.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/file.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/file.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/file.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/file.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/forktest.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/forktest.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/fs.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/fs.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/fs.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/fs.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/grep.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/grep.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/ide.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ide.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/init.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/init.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/ioapic.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ioapic.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/kalloc.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/kalloc.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/kbd.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/kbd.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/kbd.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/kbd.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/kill.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/kill.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/lapic.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/lapic.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/ln.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ln.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/log.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/log.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/ls.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ls.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/main.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/main.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/memide.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/memide.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/memlayout.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/memlayout.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/mkdir.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/mkdir.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/mkfs.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/mkfs.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/mmu.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/mmu.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/mp.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/mp.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/mp.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/mp.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/param.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/param.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/picirq.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/picirq.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/pipe.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/pipe.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/printf.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/printf.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/proc.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/proc.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/proc.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/proc.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/procfs.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/procfs.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/rm.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/rm.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/sh.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sh.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/sleeplock.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sleeplock.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/sleeplock.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sleeplock.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/spinlock.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/spinlock.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/spinlock.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/spinlock.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/stat.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/stat.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/stressfs.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/stressfs.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/string.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/string.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/syscall.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/syscall.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/syscall.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/syscall.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/sysfile.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sysfile.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/sysproc.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/sysproc.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/trap.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/test.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/traps.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/trap.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/types.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/traps.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/uart.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/types.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/ulib.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/uart.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/umalloc.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/ulib.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/user.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/umalloc.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/usertests.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/user.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/vm.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/usertests.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/wc.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/vm.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/x86.h">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/wc.c">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/zombie.c">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/x86.h">
 			<Option target="os192_Assignment4"/>
 		</Unit>
-		<Unit filename="/home/tamar/os192/Assignment4/os192-Assignment4/CMakeLists.txt">
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/zombie.c">
+			<Option target="os192_Assignment4"/>
+		</Unit>
+		<Unit filename="/users/studs/bsc/2016/rosent/os192-Assignment4/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

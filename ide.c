@@ -208,3 +208,57 @@ count_write_waiting() {
     release(&idelock);
     return count;
 }
+
+void itoa(int n, char *str) {
+    int temp, len;
+    temp = n;
+    len = 1;
+    while (temp / 10 != 0) {
+        len++;
+        temp /= 10;
+    }
+    for (temp = len; temp > 0; temp--) {
+        str[temp - 1] = (n % 10) + 48;
+        n /= 10;
+    }
+    str[len] = '\0';
+}
+
+static char buff[256];
+
+char *
+get_working_blocks_list() {
+    acquire(&idelock);
+
+    struct buf *curr;
+    curr = idequeue;
+    char itoa_buf[10];
+    memmove(buff, "Working blocks: ", strlen("Working blocks: "));
+    int buff_index = strlen("Working blocks: ");
+    while (curr != 0) {
+        // dev
+        itoa(curr->dev, itoa_buf);
+        memmove(buff + buff_index, itoa_buf, strlen(itoa_buf));
+        buff_index += strlen(itoa_buf);
+        memmove(itoa_buf, 0, sizeof(itoa_buf));
+
+        memmove(buff + buff_index, ",", 1);
+        buff_index++;
+
+        // block
+        itoa(curr->blockno, itoa_buf);
+        memmove(buff + buff_index, itoa_buf, strlen(itoa_buf));
+        buff_index += strlen(itoa_buf);
+        memmove(itoa_buf, 0, sizeof(itoa_buf));
+
+        curr = curr->next;
+
+        if (curr != 0) {
+            memmove(buff + buff_index, ";", 1);
+            buff_index++;
+        }
+    }
+    memmove(buff + buff_index, "\0", 1);
+    release(&idelock);
+    return buff;
+}
