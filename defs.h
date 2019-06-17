@@ -111,6 +111,8 @@ short get_nlinks(int);
 
 int get_used_blocks(int);
 
+void get_cache_idx_arr(int *);
+
 // ide.c
 void ideinit(void);
 

@@ -382,7 +382,7 @@ sys_chdir(void)
     return -1;
   }
   ilock(ip);
-  if(ip->type != T_DIR){
+  if(ip->type != T_DIR && !IS_DEV_DIR(ip)){
     iunlockput(ip);
     end_op();
     return -1;
@@ -442,4 +442,14 @@ sys_pipe(void)
   fd[0] = fd0;
   fd[1] = fd1;
   return 0;
+}
+
+int
+sys_get_cache_idx_arr(void)
+{
+    int *arr;
+    if(argptr(0, (void*)&arr, 2*sizeof(arr[0])) < 0)
+        return -1;
+    get_cache_idx_arr(arr);
+    return 0;
 }

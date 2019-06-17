@@ -777,8 +777,38 @@ get_used_blocks(int cache_idx) {
     }
     size = icache.inode[cache_idx].size;
     int num_of_blocks;
-    if(size%BSIZE == 0) num_of_blocks = size/BSIZE;
-    else num_of_blocks = (size/BSIZE) + 1;
+    if (size % BSIZE == 0) num_of_blocks = size / BSIZE;
+    else num_of_blocks = (size / BSIZE) + 1;
     release(&icache.lock);
     return num_of_blocks;
+}
+
+
+void
+get_cache_idx_arr(int *used_cache_idx) {
+//    char tmp[16];
+//    char cache_idx_arr[10];
+    struct inode *curr;
+    int cache_idx = 0;
+    acquire(&icache.lock);
+
+    for (curr = &icache.inode[0]; curr < &icache.inode[NINODE]; curr++) {
+//        memset(tmp,0, 16);
+//        memset(cache_idx_arr,0, 10);
+//        memmove(tmp,path, 16);
+        // in use
+        if (curr->ref > 0) {
+            used_cache_idx[cache_idx] = 1;
+//            cprintf("cache index: %d\n", cache_idx);
+//            itoa2(cache_idx,cache_idx_arr);
+//            memmove(tmp + 16, cache_idx_arr, strlen(cache_idx_arr));
+//            memmove(tmp + strlen(tmp), "\0", 1);
+//            cprintf("path: %s\n", tmp);
+
+//            fd = open(path, O_RDONLY);
+//            read(fd, buf, 50);
+        }
+        cache_idx++;
+    }
+    release(&icache.lock);
 }

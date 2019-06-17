@@ -27,7 +27,6 @@ procfsisdir(struct inode *ip) {
         ip->size = 1;
         ip->minor = T_DIR;
     }
-    cprintf("procfsisdir\n");
     if (ip->minor == T_DIR) {
         return 1;
     } else return 0;
@@ -35,7 +34,6 @@ procfsisdir(struct inode *ip) {
 
 void
 procfsiread(struct inode *dp, struct inode *ip) {
-    cprintf("procfsiread\n");
     ip->major = PROCFS;
     ip->type = T_DEV;
     ip->valid = 1;
@@ -416,6 +414,7 @@ int read_inodeinfo_file(struct inode *ip, char *dst, int off, int n) {
 
     memmove(dst + buff_index, "\0", 1);
 
+    if(off > 0) return 0;
     return buff_index;
 }
 
@@ -435,17 +434,14 @@ int read_inodeinfo_file(struct inode *ip, char *dst, int off, int n) {
 // -- -- [index of inodes in use in the open inode table]
 int
 procfsread(struct inode *ip, char *dst, int off, int n) {
-    cprintf("procfsread\n");
     // case /proc/ directory
     if (ip->inum == namei("proc")->inum) {
-        cprintf("/proc/\n");
         return init_proc_dirents(ip, dst, off, n);
     }
     // write dirents arr + off -> dst, return n
 
     // case /proc/pid/
     if (ip->inum % 1000 == 0){
-        cprintf("/proc/pid/\n");
     return init_proc_pid_dirents(ip, dst, off, n);}
     // init first 2 dirents . .. (ip->inum+100, +200)
     // init 2 dirents: name, status (ip->inum+NAME, +STATUS)
@@ -453,7 +449,6 @@ procfsread(struct inode *ip, char *dst, int off, int n) {
 
     // case /proc/inodeinfo/
     if (ip->inum == INODEINFO){
-        cprintf("/proc/inodeinfo/\n");
         return init_proc_inodeinfo_dirents(ip, dst, off, n);}
     // init first 2 dirents . ..
     // init #<inodes_in_use> dirents (INODEINFO+i)
@@ -463,18 +458,15 @@ procfsread(struct inode *ip, char *dst, int off, int n) {
 
     // case /proc/ideinfo
     if (ip->inum == IDEINFO){
-        cprintf("/proc/ideinfo\n");
         return read_IDEINFO(ip, dst, off, n);}
 
     // case /proc/filestat
     if (ip->inum == FILESTAT){
-        cprintf("/proc/filestat\n");
         return read_FILESTAT(ip, dst, off, n);}
 
 
     // case /proc/pid/<file>
     if (ip->inum > 1000){
-        cprintf("/proc/pid/<file>\n");
         return handle_pid_files(ip, dst, off, n);}
     // else get pid and type
     // find the process that matches the pid
@@ -482,7 +474,6 @@ procfsread(struct inode *ip, char *dst, int off, int n) {
 
     // case /proc/inodeinfo/<file>
     if (ip->inum >= 300 && ip->inum < 1000){
-        cprintf("/proc/inodeinfo/<file>\n");
         return read_inodeinfo_file(ip, dst, off, n);}
 
     cprintf("procfsread error: inode %d wasn't found", ip->inum);
@@ -493,7 +484,6 @@ procfsread(struct inode *ip, char *dst, int off, int n) {
 
 int
 procfswrite(struct inode *ip, char *buf, int n) {
-    cprintf("procfswrite\n");
     return 0;
 }
 
