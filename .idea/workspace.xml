@@ -13,16 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2775cb1f-517e-4f6e-92d4-328965a55d34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/defs.h" beforeDir="false" afterPath="$PROJECT_DIR$/defs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fs.c" beforeDir="false" afterPath="$PROJECT_DIR$/fs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ls.c" beforeDir="false" afterPath="$PROJECT_DIR$/ls.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ide.c" beforeDir="false" afterPath="$PROJECT_DIR$/ide.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lsnd.c" beforeDir="false" afterPath="$PROJECT_DIR$/lsnd.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/procfs.c" beforeDir="false" afterPath="$PROJECT_DIR$/procfs.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syscall.c" beforeDir="false" afterPath="$PROJECT_DIR$/syscall.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syscall.h" beforeDir="false" afterPath="$PROJECT_DIR$/syscall.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sysfile.c" beforeDir="false" afterPath="$PROJECT_DIR$/sysfile.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.h" beforeDir="false" afterPath="$PROJECT_DIR$/user.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usys.S" beforeDir="false" afterPath="$PROJECT_DIR$/usys.S" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,8 +35,8 @@
             <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/procfs.c">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="724">
-                    <caret line="412" column="38" selection-start-line="412" selection-start-column="38" selection-end-line="412" selection-end-column="38" />
+                  <state relative-caret-position="499">
+                    <caret line="202" column="30" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
                     <folding>
                       <element signature="e#0#18#0" expanded="true" />
                     </folding>
@@ -59,18 +52,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ls.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sysfile.c">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,8 +91,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lsnd.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            <state relative-caret-position="1830">
+              <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ide.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -186,13 +176,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/file.h" />
-        <option value="$PROJECT_DIR$/ide.c" />
         <option value="$PROJECT_DIR$/test.c" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/proc.c" />
         <option value="$PROJECT_DIR$/file.c" />
         <option value="$PROJECT_DIR$/ls.c" />
-        <option value="$PROJECT_DIR$/procfs.c" />
         <option value="$PROJECT_DIR$/usys.S" />
         <option value="$PROJECT_DIR$/syscall.h" />
         <option value="$PROJECT_DIR$/syscall.c" />
@@ -201,6 +189,8 @@
         <option value="$PROJECT_DIR$/sysfile.c" />
         <option value="$PROJECT_DIR$/fs.c" />
         <option value="$PROJECT_DIR$/lsnd.c" />
+        <option value="$PROJECT_DIR$/procfs.c" />
+        <option value="$PROJECT_DIR$/ide.c" />
       </list>
     </option>
   </component>
@@ -216,10 +206,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="width" value="964" />
-    <option name="height" value="1048" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="268" />
+    <option name="y" value="146" />
+    <option name="width" value="1272" />
+    <option name="height" value="692" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -290,7 +281,7 @@
       <workItem from="1560699274761" duration="124000" />
       <workItem from="1560699435541" duration="3118000" />
       <workItem from="1560759884024" duration="8870000" />
-      <workItem from="1560769141588" duration="10000" />
+      <workItem from="1560769141588" duration="4913000" />
     </task>
     <task id="LOCAL-00001" summary="procfread template is set up + procfsiread done">
       <created>1560174737065</created>
@@ -355,14 +346,21 @@
       <option name="project" value="LOCAL" />
       <updated>1560702521584</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="need to implement the parser for lsnd">
+      <created>1560769209821</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1560769209821</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70287000" />
+    <option name="totallyTimeSpent" value="75190000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1044" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1044" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20757738" />
@@ -399,7 +397,8 @@
     <MESSAGE value="FILESTAT done&#10;next: inodeinfo init dirents" />
     <MESSAGE value="lsnd status ok&#10;next: manage offset to stop loop with cat" />
     <MESSAGE value="next: update lsnd + run yonatan's tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="next: update lsnd + run yonatan's tests" />
+    <MESSAGE value="need to implement the parser for lsnd" />
+    <option name="LAST_COMMIT_MESSAGE" value="need to implement the parser for lsnd" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/stat.h">
@@ -444,24 +443,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buf.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="419">
           <caret line="186" selection-start-line="186" selection-end-line="186" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ide.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="243" selection-start-line="243" selection-end-line="243" />
         </state>
       </provider>
     </entry>
@@ -582,20 +567,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ide.d">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/procfs.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="412" column="38" selection-start-line="412" selection-start-column="38" selection-end-line="412" selection-end-column="38" />
+        <state relative-caret-position="499">
+          <caret line="202" column="30" selection-start-line="202" selection-start-column="30" selection-end-line="202" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/buf.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ide.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="238" column="14" selection-start-line="238" selection-start-column="14" selection-end-line="238" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lsnd.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        <state relative-caret-position="1830">
+          <caret line="126" column="43" selection-start-line="126" selection-start-column="43" selection-end-line="126" selection-end-column="43" />
         </state>
       </provider>
     </entry>

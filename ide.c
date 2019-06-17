@@ -237,6 +237,7 @@ get_working_blocks_list() {
     int buff_index = strlen("Working blocks: ");
     while (curr != 0) {
         // dev
+        cprintf("curr dev: %u",curr->dev );
         itoa4(curr->dev, itoa_buf);
         memmove(buff + buff_index, itoa_buf, strlen(itoa_buf));
         buff_index += strlen(itoa_buf);

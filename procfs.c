@@ -135,7 +135,7 @@ int handle_pid_files(struct inode *ip, char *dst, int off, int n) {
     p = get_proc_by_pid(pid);
     if (filenum == NAME) {
         char *name = p->name;
-        memmove(dst, "name: ", strlen("name:"));
+        memmove(dst, "name: ", strlen("name: "));
         memmove(dst + strlen("name: "), name, strlen(name) + 1);
     }
     if (filenum == STATUS) {
